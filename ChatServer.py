@@ -4,7 +4,7 @@ serverSocket = socket(AF_INET, SOCK_STREAM)
 serverSocket.bind(('',serverPort)) 
 serverSocket.listen(1) 
 connectionSocket, addr = serverSocket.accept()
-print('The server is ready to receive\n To exit()') 
+print('The server is ready to receive from', addr, '\n To exit()') 
 while True:
     sentence = connectionSocket.recv(1024).decode() 
     if sentence =='exit()':
